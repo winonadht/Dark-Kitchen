@@ -2,50 +2,50 @@ const collection = [
     {
       name: "Pizza Margarita",
       veganOrNot: "Veggie",
-      picture: 'assets/img/virgil-abloh.jpg',
+      picture: '"assets/img/margarita.jpg"',
       reciepe: ["tomates", "mozzarella", "basilic"],
       addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-      price: [8, "€"],
+      price: 8 + "€",
     },
     {
         name: "Pizza Regina",
         veganOrNot: "▬",
-        picture: 'assets/img/virgil-abloh.jpg',
+        picture: 'assets/img/regina.jpg',
         reciepe: ["tomates", "mozzarella","jambon", "champignon"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [10, "€"],
+        price: 10 + "€",
       },
       {
         name: "Pizza 4 Fromaggi",
         veganOrNot: "Veggie",
-        picture: 'assets/img/virgil-abloh.jpg',
+        picture: 'assets/img/4fromages.jpg',
         reciepe: ["tomates", "mozzarella", "bel paese","gorgonzola","taleggio"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [11, "€"],
+        price: 10 + "€",
       },
       {
         name: "Pizza Napoli",
         veganOrNot: "▬",
-        picture: 'assets/img/virgil-abloh.jpg',
+        picture: 'assets/img/napoli.jpg',
         reciepe: ["tomates", "mozzarella", "câpre","anchois"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [10, "€"],
+        price: 10 + "€",
       },
       {
         name: "Pizza Calzone (pizza fermée)",
         veganOrNot: "▬",
-        picture: 'assets/img/virgil-abloh.jpg',
+        picture: 'assets/img/calzone.jpg',
         reciepe: ["tomates", "mozzarella","jambon", "champignon","oeuf","ail"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [11, "€"],
+        price: 10 + "€",
       },
       {
         name: "Pizza Végétarienne",
         veganOrNot: "Veggie",
-        picture: 'assets/img/virgil-abloh.jpg',
+        picture: 'assets/img/vege.jpg',
         reciepe: ["tomates", "mozzarella", "champignon", "artichauts", "poivrons", "olives", "oignons"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [13, "€"],
+        price: 10 + "€",
       },
 ]
 
