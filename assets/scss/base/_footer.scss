@@ -1,0 +1,23 @@
+footer {
+    width: 100%;
+    background-color: #57B947;
+    height: 150px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.links {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+.media {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    img {
+        width: 30px;
+    }
+}
