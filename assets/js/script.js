@@ -1,172 +1,153 @@
 document.addEventListener('DOMContentLoaded', function () {
-const pizzas = [
-  {
-    name: "Pizza margarita",
-    vegetarian: "Veggie",
-    picture: 'assets/img/virgil-abloh.jpg',
-    reciepe: ["tomates™", "mozzarella", "basilic"],
-    addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-    price: [8, "€"],
-  },
-  {
-    name: "Pizza margarita",
-    vegetarian: "Veggie",
-    picture: 'assets/img/virgil-abloh.jpg',
-    reciepe: ["tomates™", "mozzarella", "basilic"],
-    addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-    price: [8, "€"],
-  },
-  {
-    name: "Pizza margarita",
-    vegetarian: "Veggie",
-    picture: 'assets/img/virgil-abloh.jpg',
-    reciepe: ["tomates™", "mozzarella", "basilic"],
-    addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-    price: [8, "€"],
-  },
-  {
-    name: "Pizza margarita",
-    vegetarian: "Veggie",
-    picture: 'assets/img/virgil-abloh.jpg',
-    reciepe: ["tomates™", "mozzarella", "basilic"],
-    addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-    price: [8, "€"],
-  },
-  {
-    name: "Pizza margarita",
-    vegetarian: "Veggie",
-    picture: 'assets/img/virgil-abloh.jpg',
-    reciepe: ["tomates™", "mozzarella", "basilic"],
-    addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-    price: [8, "€"],
-  },
-  {
-    name: "Pizza margarita",
-    vegetarian: "Veggie",
-    picture: 'assets/img/virgil-abloh.jpg',
-    reciepe: ["tomates™", "mozzarella", "basilic"],
-    addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-    price: [8, "€"],
-  },
+  const pizzas = [
+    {
+      name: "Pizza Margarita",
+      veganOrNot: "Veggie",
+      picture: 'assets/img/margarita.jpg',
+      reciepe: ["tomates", "mozzarella", "basilic"],
+      addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+      price: "8€",
+    },
+    {
+        name: "Pizza Regina",
+        veganOrNot: "▬",
+        picture: 'assets/img/regina.jpg',
+        reciepe: ["tomates", "mozzarella","jambon", "champignon"],
+        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        price: "10€",
+      },
+      {
+        name: "Pizza 4 Fromaggi",
+        veganOrNot: "Veggie",
+        picture: 'assets/img/4fromages.jpg',
+        reciepe: ["tomates", "mozzarella", "bel paese","gorgonzola","taleggio"],
+        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        price: "13€",
+      },
+      {
+        name: "Pizza Napoli",
+        veganOrNot: "▬",
+        picture: 'assets/img/napoli.jpg',
+        reciepe: ["tomates", "mozzarella", "câpre","anchois"],
+        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        price: "10€",
+      },
+      {
+        name: "Pizza Calzone (pizza fermée)",
+        veganOrNot: "▬",
+        picture: 'assets/img/calzone.jpg',
+        reciepe: ["tomates", "mozzarella","jambon", "champignon","oeuf","ail"],
+        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        price: "12€",
+      },
+      {
+        name: "Pizza Végétarienne",
+        veganOrNot: "Veggie",
+        picture: 'assets/img/vege.jpg',
+        reciepe: ["tomates", "mozzarella", "champignon", "artichauts", "poivrons", "olives", "oignons"],
+        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        price: "11€",
+      },
 ]
 
-// Création de chaque MEAL----------------------------------------
-const meal = document.createElement('section');
-meal.className = 'meal';
-document.body.appendChild(meal);
-
-// Parcourir la collection et créer les MEAL html-----------------
-pizzas.forEach(pizza => {
-
-  // Créer une <section> pour chaque PIZZA-CARD--------------------
-  const pizzaCard = document.createElement('section');
-  pizzaCard.classList.add('pizza-card');
-
-  // Créer une <span> pour chaque VEGGIE OR NOT---------------------
-  const veggieElement = document.createElement('span');
-  veggieElement.classList.add('Veggie-or-not');
-  veggieElement.textContent = pizza.vegetarian;
-  pizzaCard.appendChild(veggieElement);
-
-   // Créer une <img> pour PICTURE ---------------------------------
-   const imgElement = document.createElement('img');
-   imgElement.classList.add('photo');
-   imgElement.src = designer.picture; //`url(${})`; 
-
-  //  Créer une <p> pour RECIEPE------------------------------------
-   const reciepeElement = document.createElement('p');
-   reciepeElement.classList.add('reciepe');
-   reciepeElement.textContent = pizza.reciepe;
-   pizzaCard.appendChild(reciepeElement);
-
-  //  Créer un <button> pour ADD-TO-CARD-----------------------------
-  const addToCardElement = document.createElement('button');
-  addToCardElement.classList.add('add-to-cart');
-  addToCardElement.textContent = pizza.addToCart;
-  pizzaCard.appendChild(addToCardElement);
-
-  // Créer un <button> pour PRICE-----------------------------------
-  const priceElement = document.createElement('??'); // Quelle balise ?
-  priceElement.classList.add('add-to-cart');
-  priceElement.textContent = pizza.price;
-  pizzaCard.appendChild(priceElement);
 
 
-meal.appendChild(pizzaCard);
-})
-})
+  const main = document.querySelector('main');
 
+  pizzas.forEach(pizza => {
+    // Création de chaque MEAL----------------------------------------
+    const pizzaCard = document.createElement('section');
+    pizzaCard.classList.add('pizza-card');
 
+    const nameElement = document.createElement('h3');
+    nameElement.textContent = pizza.name;
+    pizzaCard.appendChild(nameElement);
 
+    // const veggieElement = document.createElement('span');
+    // veggieElement.textContent = pizza.vegetarian;
+    // pizzaCard.appendChild(veggieElement);
 
+    const imgElement = document.createElement('img');
+    imgElement.classList.add('photo');
+    imgElement.src = pizza.picture;
+    pizzaCard.appendChild(imgElement);
 
+    const reciepeElement = document.createElement('p');
+    reciepeElement.textContent = "Ingredients: " + pizza.reciepe.join(', ');
+    pizzaCard.appendChild(reciepeElement);
 
+    const addToCardElement = document.createElement('button');
+    addToCardElement.classList.add('add-to-cart');
+    addToCardElement.textContent = pizza.addToCart;
+    pizzaCard.appendChild(addToCardElement);
 
+    const priceElement = document.createElement('span');
+    priceElement.classList.add('price');
+    priceElement.textContent = pizza.price;
+    pizzaCard.appendChild(priceElement);
 
-
-// Parcourir la collection et créer les cartes HTML----------------
-collection.forEach(designer => {
-  // Créer une <section> pour chaque designer---------------------
-  const designerCard = document.createElement('section');
-  designerCard.classList.add('designer-card');
-
-
-  // Créer une <img> pour IMAGE ---------------------------------
-  const imageElement = document.createElement('img');
-  imageElement.classList.add('photo');
-  imageElement.src = designer.picture; //`url(${designer.picture})`; //----------------------- PROBLEME AVEC CETTE LIGNE ---------------------------
-  designerCard.appendChild(imageElement);
-
-  // Créer un  <h2> pour NAME--------------------------------------
-  const nameElement = document.createElement('h2');
-  nameElement.classList.add('name');
-  nameElement.textContent = designer.name;
-  designerCard.appendChild(nameElement);
-
-  // Créer un <h4> pour NATIONALITY----------------------------
-  const nationalityElement = document.createElement('h4');
-  nationalityElement.classList.add('country');
-  nationalityElement.textContent = designer.nationality;
-  designerCard.appendChild(nationalityElement);
-
-  // Créer un <article> pour SPE-------------------------------
-  const speElement = document.createElement('article');
-  speElement.classList.add('skills');
-  speElement.textContent = designer.spe;
-  designerCard.appendChild(speElement);
-
-
-  // Créer une <ul> <li> pour LINKS-----------------------------
-  const linksList = document.createElement('ul');
-  linksList.classList.add('allLinks');
-  if (Array.isArray(designer.links)) {
-    designer.links.forEach(link => {
-      const linkItem = document.createElement('li');
-      linkItem.classList.add('link');
-      const linkAnchor = document.createElement('a');
-      linkAnchor.href = link;
-      linkAnchor.target = '_blank';
-      linkAnchor.textContent = link;
-      linkItem.appendChild(linkAnchor);
-      linksList.appendChild(linkItem);
-    });
-  } else if (typeof designer.links === 'string') {
-    const linkItem = document.createElement('li');
-    const linkAnchor = document.createElement('a');
-    linkAnchor.href = designer.links;
-    linkAnchor.target = '_blank';
-    linkAnchor.textContent = designer.links;
-    linkItem.appendChild(linkAnchor);
-    linksList.appendChild(linkItem);
-  }
-  designerCard.appendChild(linksList);
-
-  // Créer un <p> pour DETAILS------------------------------------
-  const detailsElement = document.createElement('p');
-  detailsElement.classList.add('about');
-  detailsElement.textContent = designer.details;
-  designerCard.appendChild(detailsElement);
-
-  // Ajouter la carte (designerCard) au conteneur principal (designersCard)
-  designersCard.appendChild(designerCard);
+    main.appendChild(pizzaCard);
+  });
 });
+
+
+
+
+
+
+
+
+
+
+//   // Création de chaque MEAL----------------------------------------
+//   const meal = document.createElement('section');
+//   meal.className = 'meal';
+//   document.body.appendChild(meal);
+
+//   // Parcourir la collection et créer les MEAL html-----------------
+//   pizzas.forEach(pizza => {
+
+//     // Créer une <section> pour chaque PIZZA-CARD--------------------
+//     const pizzaCard = document.createElement('section');
+//     pizzaCard.classList.add('pizza-card');
+
+//     const nameElement = document.createElement('h3');
+//     nameElement.classList.add('name');
+//     nameElement.textContent = pizza.name;
+//     pizzaCard.appendChild(nameElement);
+
+
+//     // Créer une <span> pour chaque VEGGIE OR NOT---------------------
+//     const veggieElement = document.createElement('span');
+//     veggieElement.classList.add('Veggie-or-not');
+//     veggieElement.textContent = pizza.vegetarian;
+//     pizzaCard.appendChild(veggieElement);
+
+//     // Créer une <img> pour PICTURE ---------------------------------
+//     const imgElement = document.createElement('img');
+//     imgElement.classList.add('photo');
+//     imgElement.src = designer.picture; //`url(${})`; 
+
+//     //  Créer une <p> pour RECIEPE------------------------------------
+//     const reciepeElement = document.createElement('p');
+//     reciepeElement.classList.add('reciepe');
+//     reciepeElement.textContent = pizza.reciepe;
+//     pizzaCard.appendChild(reciepeElement);
+
+//     //  Créer un <button> pour ADD-TO-CARD-----------------------------
+//     const addToCardElement = document.createElement('button');
+//     addToCardElement.classList.add('add-to-cart');
+//     addToCardElement.textContent = pizza.addToCart;
+//     pizzaCard.appendChild(addToCardElement);
+
+//     // Créer un <button> pour PRICE-----------------------------------
+//     const priceElement = document.createElement('??'); // Quelle balise ?
+//     priceElement.classList.add('add-to-cart');
+//     priceElement.textContent = pizza.price;
+//     pizzaCard.appendChild(priceElement);
+
+
+//     meal.appendChild(pizzaCard);
+// })
+// })
+
