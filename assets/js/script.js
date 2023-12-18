@@ -1,51 +1,51 @@
 const collection = [
     {
-      name: "Pizza margarita",
+      name: "Pizza Margarita",
       veganOrNot: "Veggie",
       picture: 'assets/img/virgil-abloh.jpg',
-      reciepe: ["tomates™", "mozzarella", "basilic"],
+      reciepe: ["tomates", "mozzarella", "basilic"],
       addToCart: "add to cart btn",  // Inserer une icon cart cliquable
       price: [8, "€"],
     },
     {
-        name: "Pizza margarita",
-        veganOrNot: "Veggie",
+        name: "Pizza Regina",
+        veganOrNot: "▬",
         picture: 'assets/img/virgil-abloh.jpg',
-        reciepe: ["tomates™", "mozzarella", "basilic"],
+        reciepe: ["tomates", "mozzarella","jambon", "champignon"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [8, "€"],
+        price: [10, "€"],
       },
       {
-        name: "Pizza margarita",
+        name: "Pizza 4 Fromaggi",
         veganOrNot: "Veggie",
         picture: 'assets/img/virgil-abloh.jpg',
-        reciepe: ["tomates™", "mozzarella", "basilic"],
+        reciepe: ["tomates", "mozzarella", "bel paese","gorgonzola","taleggio"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [8, "€"],
+        price: [11, "€"],
       },
       {
-        name: "Pizza margarita",
-        veganOrNot: "Veggie",
+        name: "Pizza Napoli",
+        veganOrNot: "▬",
         picture: 'assets/img/virgil-abloh.jpg',
-        reciepe: ["tomates™", "mozzarella", "basilic"],
+        reciepe: ["tomates", "mozzarella", "câpre","anchois"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [8, "€"],
+        price: [10, "€"],
       },
       {
-        name: "Pizza margarita",
-        veganOrNot: "Veggie",
+        name: "Pizza Calzone (pizza fermée)",
+        veganOrNot: "▬",
         picture: 'assets/img/virgil-abloh.jpg',
-        reciepe: ["tomates™", "mozzarella", "basilic"],
+        reciepe: ["tomates", "mozzarella","jambon", "champignon","oeuf","ail"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [8, "€"],
+        price: [11, "€"],
       },
       {
-        name: "Pizza margarita",
+        name: "Pizza Végétarienne",
         veganOrNot: "Veggie",
         picture: 'assets/img/virgil-abloh.jpg',
-        reciepe: ["tomates™", "mozzarella", "basilic"],
+        reciepe: ["tomates", "mozzarella", "champignon", "artichauts", "poivrons", "olives", "oignons"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: [8, "€"],
+        price: [13, "€"],
       },
 ]
 
