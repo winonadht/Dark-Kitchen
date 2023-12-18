@@ -60,12 +60,14 @@ document.addEventListener('DOMContentLoaded', function () {
     pizzaCard.classList.add('pizza-card');
 
     const nameElement = document.createElement('h3');
+    nameElement.classList.add('name');
     nameElement.textContent = pizza.name;
     pizzaCard.appendChild(nameElement);
 
-    // const veggieElement = document.createElement('span');
-    // veggieElement.textContent = pizza.vegetarian;
-    // pizzaCard.appendChild(veggieElement);
+    const veggieElement = document.createElement('span');
+    veggieElement.classList.add('veganOrNot');
+    veggieElement.textContent = pizza.veganOrNot;
+    pizzaCard.appendChild(veggieElement);
 
     const imgElement = document.createElement('img');
     imgElement.classList.add('photo');
@@ -73,12 +75,15 @@ document.addEventListener('DOMContentLoaded', function () {
     pizzaCard.appendChild(imgElement);
 
     const reciepeElement = document.createElement('p');
-    reciepeElement.textContent = "Ingredients: " + pizza.reciepe.join(', ');
+    reciepeElement.classList.add('ingredients');
+    reciepeElement.textContent = pizza.reciepe.join(', ');
     pizzaCard.appendChild(reciepeElement);
 
     const addToCardElement = document.createElement('button');
     addToCardElement.classList.add('add-to-cart');
+    addToCardElement.type = pizza.addToCart;
     addToCardElement.textContent = pizza.addToCart;
+
     pizzaCard.appendChild(addToCardElement);
 
     const priceElement = document.createElement('span');
@@ -98,56 +103,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-//   // Création de chaque MEAL----------------------------------------
-//   const meal = document.createElement('section');
-//   meal.className = 'meal';
-//   document.body.appendChild(meal);
-
-//   // Parcourir la collection et créer les MEAL html-----------------
-//   pizzas.forEach(pizza => {
-
-//     // Créer une <section> pour chaque PIZZA-CARD--------------------
-//     const pizzaCard = document.createElement('section');
-//     pizzaCard.classList.add('pizza-card');
-
-//     const nameElement = document.createElement('h3');
-//     nameElement.classList.add('name');
-//     nameElement.textContent = pizza.name;
-//     pizzaCard.appendChild(nameElement);
-
-
-//     // Créer une <span> pour chaque VEGGIE OR NOT---------------------
-//     const veggieElement = document.createElement('span');
-//     veggieElement.classList.add('Veggie-or-not');
-//     veggieElement.textContent = pizza.vegetarian;
-//     pizzaCard.appendChild(veggieElement);
-
-//     // Créer une <img> pour PICTURE ---------------------------------
-//     const imgElement = document.createElement('img');
-//     imgElement.classList.add('photo');
-//     imgElement.src = designer.picture; //`url(${})`; 
-
-//     //  Créer une <p> pour RECIEPE------------------------------------
-//     const reciepeElement = document.createElement('p');
-//     reciepeElement.classList.add('reciepe');
-//     reciepeElement.textContent = pizza.reciepe;
-//     pizzaCard.appendChild(reciepeElement);
-
-//     //  Créer un <button> pour ADD-TO-CARD-----------------------------
-//     const addToCardElement = document.createElement('button');
-//     addToCardElement.classList.add('add-to-cart');
-//     addToCardElement.textContent = pizza.addToCart;
-//     pizzaCard.appendChild(addToCardElement);
-
-//     // Créer un <button> pour PRICE-----------------------------------
-//     const priceElement = document.createElement('??'); // Quelle balise ?
-//     priceElement.classList.add('add-to-cart');
-//     priceElement.textContent = pizza.price;
-//     pizzaCard.appendChild(priceElement);
-
-
-//     meal.appendChild(pizzaCard);
-// })
-// })
 
