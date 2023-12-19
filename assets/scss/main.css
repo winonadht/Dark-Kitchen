@@ -83,6 +83,66 @@ footer {
   width: 30px;
 }
 
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+.pizza-card {
+  border-radius: 8px;
+  margin: 10px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+.pizza-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.pizza-card__name {
+  font-size: 1.5em;
+  margin: 10px, 10px, 10px, 10px;
+}
+.pizza-card__veganOrNot {
+  font-style: italic;
+  color: #6B8E23;
+}
+.pizza-card__photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.pizza-card__ingredients {
+  margin: 10px 0;
+}
+.pizza-card__add-to-cart {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pizza-card__add-to-cart:hover {
+  background-color: #333;
+}
+.pizza-card__price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .pizza-card {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
 .dark-mode {
   background-color: #1c1c1e;
   color: #fefefe;

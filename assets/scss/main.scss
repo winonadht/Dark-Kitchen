@@ -1,11 +1,13 @@
-//Fichier scss qui va importer tous les autres
-
 
 // Attention à l'ordre des imports (ex : ne pas mettre un fichiers qui a besoins des variables avant l'import de celles-ci
 @import './vendors/reset';
 @import './utils/variables';
 @import './utils/mixins';
-@import './base/base.scss';
 
+// base
 @import './base/footer';
-@import './base/darkmode'
+@import './base/cart';
+
+// composent 
+@import './components/darkmode';
+

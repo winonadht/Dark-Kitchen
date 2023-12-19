@@ -1,19 +1,20 @@
-const collection = [
+document.addEventListener('DOMContentLoaded', function () {
+  const pizzas = [
     {
       name: "Pizza Margarita",
       veganOrNot: "Veggie",
-      picture: '"assets/img/margarita.jpg"',
+      picture: 'assets/img/margarita.jpg',
       reciepe: ["tomates", "mozzarella", "basilic"],
       addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-      price: 8 + "€",
+      price: "8€",
     },
     {
         name: "Pizza Regina",
-        veganOrNot: "▬",
+        veganOrNot: "-",
         picture: 'assets/img/regina.jpg',
         reciepe: ["tomates", "mozzarella","jambon", "champignon"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: 10 + "€",
+        price: "10€",
       },
       {
         name: "Pizza 4 Fromaggi",
@@ -21,23 +22,23 @@ const collection = [
         picture: 'assets/img/4fromages.jpg',
         reciepe: ["tomates", "mozzarella", "bel paese","gorgonzola","taleggio"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: 10 + "€",
+        price: "13€",
       },
       {
         name: "Pizza Napoli",
-        veganOrNot: "▬",
+        veganOrNot: "-",
         picture: 'assets/img/napoli.jpg',
         reciepe: ["tomates", "mozzarella", "câpre","anchois"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: 10 + "€",
+        price: "10€",
       },
       {
         name: "Pizza Calzone (pizza fermée)",
-        veganOrNot: "▬",
+        veganOrNot: "-",
         picture: 'assets/img/calzone.jpg',
         reciepe: ["tomates", "mozzarella","jambon", "champignon","oeuf","ail"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: 10 + "€",
+        price: "12€",
       },
       {
         name: "Pizza Végétarienne",
@@ -45,54 +46,51 @@ const collection = [
         picture: 'assets/img/vege.jpg',
         reciepe: ["tomates", "mozzarella", "champignon", "artichauts", "poivrons", "olives", "oignons"],
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
-        price: 10 + "€",
+        price: "11€",
       },
 ]
 
 
 
+  const main = document.querySelector('main');
 
+  pizzas.forEach(pizza => {
+    // Création de chaque MEAL----------------------------------------
+    const pizzaCard = document.createElement('section');
+    pizzaCard.classList.add('pizza-card');
 
-const meal = document.createElement('section');
-meal.className = 'meal';
-document.main.appendChild(meal);
+    const nameElement = document.createElement('h3');
+    nameElement.classList.add('name');
+    nameElement.textContent = pizza.name;
+    pizzaCard.appendChild(nameElement);
 
+    const veggieElement = document.createElement('span');
+    veggieElement.classList.add('veganOrNot');
+    veggieElement.textContent = pizza.veganOrNot;
+    pizzaCard.appendChild(veggieElement);
 
+    const imgElement = document.createElement('img');
+    imgElement.classList.add('photo');
+    imgElement.src = pizza.picture;
+    pizzaCard.appendChild(imgElement);
 
+    const reciepeElement = document.createElement('p');
+    reciepeElement.classList.add('ingredients');
+    reciepeElement.textContent = pizza.reciepe.join(', ');
+    pizzaCard.appendChild(reciepeElement);
 
+    const addToCardElement = document.createElement('button');
+    addToCardElement.classList.add('add-to-cart');
+    addToCardElement.type = pizza.addToCart;
+    addToCardElement.textContent = pizza.addToCart;
 
+    pizzaCard.appendChild(addToCardElement);
 
+    const priceElement = document.createElement('span');
+    priceElement.classList.add('price');
+    priceElement.textContent = pizza.price;
+    pizzaCard.appendChild(priceElement);
 
-// const designersCard = document.createElement('section');
-// designersCard.className = 'designers-container';
-// document.body.appendChild(designersCard);
-
-// // Parcourir la collection et créer les cartes HTML----------------
-// collection.forEach(designer => {
-//   // Créer une <section> pour chaque designer---------------------
-//   const designerCard = document.createElement('section');
-//   designerCard.classList.add('designer-card');
-
-//   // Créer une <img> pour IMAGE ---------------------------------
-//   const imageElement = document.createElement('img');
-//    imageElement.classList.add('photo');
-//    imageElement.src = designer.picture; //`url(${designer.picture})`; //----------------------- PROBLEME AVEC CETTE LIGNE ---------------------------
-//   designerCard.appendChild(imageElement);
-
-//   // Créer un  <h2> pour NAME--------------------------------------
-//   const nameElement = document.createElement('h2');
-//   nameElement.classList.add('name');
-//   nameElement.textContent = designer.name;
-//   designerCard.appendChild(nameElement);
-
-//   // Créer un <h4> pour NATIONALITY----------------------------
-//   const nationalityElement = document.createElement('h4');
-//   nationalityElement.classList.add('country');
-//   nationalityElement.textContent = designer.nationality;
-//   designerCard.appendChild(nationalityElement);
-
-//   // Créer un <article> pour SPE-------------------------------
-//   const speElement = document.createElement('article');
-//   speElement.classList.add('skills');
-//   speElement.textContent = designer.spe;
-//   designerCard.appendChild(speElement);
+    main.appendChild(pizzaCard);
+  });
+});
