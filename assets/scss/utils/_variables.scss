@@ -6,6 +6,7 @@ $break-desktop : 900px;
 $font-text :'Crimson Text', serif;
 $font-main :'Josefin Sans', sans-serif;
 $font-name :'Playfair Display', serif;
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@400;700&display=swap');
 
 //Colors
 // RED-------------------------------------
@@ -15,7 +16,7 @@ $CrimsonRed: rgb(186, 12, 12);
 $PoppyRed: rgb(255, 0, 0);
 $FrenchGrey: rgb(255, 235, 235);
 // GREEN-------------------------
-$GreyGreenLight: rgb(236, 255, 235);
+$GreyGreenLight: rgb(238, 253, 238);
 $OliveGreen: rgb(39, 163, 0);
 $DarkGreen: rgb(42, 133, 14);
 $KelpGreen: rgb(45, 102, 27);
@@ -28,5 +29,4 @@ $space-m: 1.5rem;
 $grid-gap:0.8rem;
 
 //Effect
-
 $small-shadow : 0px 4px 4px rgba(0, 0, 0, 0.25);

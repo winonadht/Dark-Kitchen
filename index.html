@@ -6,27 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/scss/main.css">
-    <script src="./assets/js/script.js"></script>
+    
+    <script defer src="./assets/js/script.js"></script>
     <title>Dark kitchen</title>
 </head>
 
 <body>
     <header>
-        <button onclick="toggleDarkMode()">Activer/Désactiver le mode sombre</button>
+        <div class="toggle-switch">
+            <label class="switch-label">
+              <input type="checkbox" class="checkbox" onclick="toggleDarkMode()">
+              <span class="slider"></span>
+            </label>
+          </div>
         <script src="./assets/js/dark-mode.js"></script>
-        <a href="">logo of dark kitchen</a>
-        <h1>Name of Dark kitchen</h1>
-        <a href="">logo menu (burger)</a>
+        <section class="logopizza">
+            <a href=""><img class= imglogo src="./assets/img/logo.png" alt="Logo pizza"></a>
+        </section>
+        <section class="title">
+            <h1>Pizzalicious.</h1>
+        </section>
+        <section class="logomenu">
+            <a class=lien href="lien"><img class= imgmenu src="/./assets/img/menu.png" alt="Logo Menu"></a>
+        </section>
     </header>
 
     <main>
         <!--  a faire dans JS -->
     </main>
-    <a href="">logo of dark kitchen</a>
-
-
-
-
     <footer>
         <section>
             <a href="">logo of dark kitchen</a>
