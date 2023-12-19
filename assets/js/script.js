@@ -5,15 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
       veganOrNot: "Veggie",
       picture: 'assets/img/margarita.jpg',
       reciepe: ["tomates", "mozzarella", "basilic"],
-      addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+      addToCart: "add to cart",  // Inserer une icon cart cliquable
       price: "8€",
     },
     {
         name: "Pizza Regina",
-        veganOrNot: "▬",
+        veganOrNot: " ",
         picture: 'assets/img/regina.jpg',
         reciepe: ["tomates", "mozzarella","jambon", "champignon"],
-        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
         price: "10€",
       },
       {
@@ -21,23 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
         veganOrNot: "Veggie",
         picture: 'assets/img/4fromages.jpg',
         reciepe: ["tomates", "mozzarella", "bel paese","gorgonzola","taleggio"],
-        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
         price: "13€",
       },
       {
         name: "Pizza Napoli",
-        veganOrNot: "▬",
+        veganOrNot: " ",
         picture: 'assets/img/napoli.jpg',
         reciepe: ["tomates", "mozzarella", "câpre","anchois"],
-        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
         price: "10€",
       },
       {
-        name: "Pizza Calzone (pizza fermée)",
-        veganOrNot: "▬",
+        name: "Pizza Calzone (fermée)",
+        veganOrNot: " ",
         picture: 'assets/img/calzone.jpg',
         reciepe: ["tomates", "mozzarella","jambon", "champignon","oeuf","ail"],
-        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
         price: "12€",
       },
       {
@@ -45,7 +45,23 @@ document.addEventListener('DOMContentLoaded', function () {
         veganOrNot: "Veggie",
         picture: 'assets/img/vege.jpg',
         reciepe: ["tomates", "mozzarella", "champignon", "artichauts", "poivrons", "olives", "oignons"],
-        addToCart: "add to cart btn",  // Inserer une icon cart cliquable
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
+        price: "11€",
+      },
+      {
+        name: "Pizza Ananas",
+        veganOrNot: " ",
+        picture: 'assets/img/pizza-ananas.png',
+        reciepe: ["tomates", "mozzarella", "jambon", "ananas"],
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
+        price: "11€",
+      },
+      {
+        name: "Pizza Kiwi",
+        veganOrNot: "",
+        picture: 'assets/img/kiwi_pizza.webp',
+        reciepe: ["tomates", "mozzarella", "jambon", "kiwi"],
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
         price: "11€",
       },
 ]
@@ -58,36 +74,38 @@ document.addEventListener('DOMContentLoaded', function () {
     // Création de chaque MEAL----------------------------------------
     const pizzaCard = document.createElement('section');
     pizzaCard.classList.add('pizza-card');
+    
+    const imgElement = document.createElement('img');
+    imgElement.classList.add('pizza-card__photo');
+    imgElement.src = pizza.picture;
+    pizzaCard.appendChild(imgElement);
 
     const nameElement = document.createElement('h3');
-    nameElement.classList.add('name');
+    nameElement.classList.add('pizza-card__name');
     nameElement.textContent = pizza.name;
     pizzaCard.appendChild(nameElement);
 
     const veggieElement = document.createElement('span');
-    veggieElement.classList.add('veganOrNot');
+    veggieElement.classList.add('pizza-card__veganOrNot');
     veggieElement.textContent = pizza.veganOrNot;
     pizzaCard.appendChild(veggieElement);
 
-    const imgElement = document.createElement('img');
-    imgElement.classList.add('photo');
-    imgElement.src = pizza.picture;
-    pizzaCard.appendChild(imgElement);
+   
 
     const reciepeElement = document.createElement('p');
-    reciepeElement.classList.add('ingredients');
+    reciepeElement.classList.add('pizza-card__ingredients');
     reciepeElement.textContent = pizza.reciepe.join(', ');
     pizzaCard.appendChild(reciepeElement);
 
     const addToCardElement = document.createElement('button');
-    addToCardElement.classList.add('add-to-cart');
+    addToCardElement.classList.add('pizza-card__add-to-cart');
     addToCardElement.type = pizza.addToCart;
     addToCardElement.textContent = pizza.addToCart;
 
     pizzaCard.appendChild(addToCardElement);
 
     const priceElement = document.createElement('span');
-    priceElement.classList.add('price');
+    priceElement.classList.add('pizza-card__price');
     priceElement.textContent = pizza.price;
     pizzaCard.appendChild(priceElement);
 

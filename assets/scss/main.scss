@@ -1,159 +1,129 @@
-//  RESET-----------------------------------------
-
-// /* http://meyerweb.com/eric/tools/css/reset/ 
-//    v2.0 | 20110126
-//    License: none (public domain)
-// */
-
-// html,
-// body,
-// div,
-// span,
-// applet,
-// object,
-// iframe,
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// p,
-// blockquote,
-// pre,
-// a,
-// abbr,
-// acronym,
-// address,
-// big,
-// cite,
-// code,
-// del,
-// dfn,
-// em,
-// img,
-// ins,
-// kbd,
-// q,
-// s,
-// samp,
-// small,
-// strike,
-// strong,
-// sub,
-// sup,
-// tt,
-// var,
-// b,
-// u,
-// i,
-// center,
-// dl,
-// dt,
-// dd,
-// ol,
-// ul,
-// li,
-// fieldset,
-// form,
-// label,
-// legend,
-// table,
-// caption,
-// tbody,
-// tfoot,
-// thead,
-// tr,
-// th,
-// td,
-// article,
-// aside,
-// canvas,
-// details,
-// embed,
-// figure,
-// figcaption,
-// footer,
-// header,
-// hgroup,
-// menu,
-// nav,
-// output,
-// ruby,
-// section,
-// summary,
-// time,
-// mark,
-// audio,
-// video {
-//   margin: 0;
-//   padding: 0;
-//   border: 0;
-//   font-size: 100%;
-//   font: inherit;
-//   vertical-align: baseline;
-// }
-
-// /* HTML5 display-role reset for older browsers */
-// article,
-// aside,
-// details,
-// figcaption,
-// figure,
-// footer,
-// header,
-// hgroup,
-// menu,
-// nav,
-// section {
-//   display: block;
-// }
-
-// body {
-//   line-height: 1;
-// }
-
-// ol,
-// ul {
-//   list-style: none;
-// }
-
-// blockquote,
-// q {
-//   quotes: none;
-// }
-
-// blockquote:before,
-// blockquote:after,
-// q:before,
-// q:after {
-//   content: '';
-//   content: none;
-// }
-
-// table {
-//   border-collapse: collapse;
-//   border-spacing: 0;
-// }
-
-
-//  RESET-----------------------------------------
-
-
-
-
-
 //Fichier scss qui va importer tous les autres
 
-
 // Attention à l'ordre des imports (ex : ne pas mettre un fichiers qui a besoins des variables avant l'import de celles-ci
-// @import './vendors/reset';
-// @import './utils/variables';
-// @import './utils/mixins';
-// @import './base/base.scss'
+@import './vendors/reset';
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/base.scss';
 
 
 // Base styles
+body {
+  background-color: $FrenchGrey;
+}
+
+// HEADER---------------------------------------------
+
+header {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $FrenchGrey;
+
+}
+
+.imglogo {
+  width: 100%;
+  height: 100%;
+  margin-left: 20%;
+}
+
+.logopizza {
+  width: 15%;
+  height: 100%;
+  background-color: $FrenchGrey;
+}
+
+.title {
+  font-family: $font-title;
+  width: 60%;
+  height: 100%;
+  font-size: 250%;
+  text-align: center;
+
+}
+
+h1 {
+  font-family: 'Paytone One', sans-serif;
+  color: $DarkKelpGreen;
+  font-size: 100px;
+  margin-top: 3%;
+  margin-left: 10%;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px 4px $Chestnut;
+}
+
+.logomenu {
+  width: 21%;
+  margin: auto;
+
+}
+
+.imgmenu {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  margin: auto;
+}
+
+.menuderoulant {
+  font-family: $font-main;
+
+  ul {
+
+    display: none;
+  }
+
+  &:hover ul {
+    display: block;
+  }
+
+  position: relative;
+  display: inline-block;
+}
+
+.listemenu {
+  position: relative;
+  list-style: none;
+  padding: 5%;
+  margin: 0;
+  background-color: $GreyGreenLight;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.listemenu li {
+
+  padding: 10px;
+  text-align: right;
+}
+
+.menuderoulant a {
+  font-family: $font-text;
+  font-size: x-large;
+  text-decoration: none;
+  color: $BlackRaspberry;
+}
+
+ul {
+  width: 60%;
+  height: 90px;
+  border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// MAIN (CARTES)---------------------------------------------
 main {
   width: 100%;
   height: auto;
@@ -166,11 +136,12 @@ main {
 }
 
 .pizza-card {
-  
+  background-color: $GreyGreenLight;
   border-radius: 8px;
   margin: 10px;
-  overflow: hidden;
+  // overflow: hidden;
   width: 300px;
+  // height: 200px;
   transition: transform 0.3s ease-in-out;
 
   &:hover {
@@ -179,43 +150,99 @@ main {
   }
 
   &__name {
+    font-family: $font-name;
     font-size: 1.5em;
-    margin: 10px, 10px, 10px, 10px;
+    margin: 20px 20px;
   }
 
+
   &__veganOrNot {
-    font-style: italic;
+    font-family: $font-main;
+    text-align: center;
+    margin: 20px 20px;
+    // font-style: italic;
     color: #6B8E23; // Olive color for vegetarian pizzas
   }
 
   &__photo {
     width: 100%;
-    height: auto;
+    height: 150px;
     border-radius: 8px;
+    object-fit: cover;
   }
 
   &__ingredients {
-    margin: 10px 0;
+
+    margin: 20px 20px;
+    font-family: $font-main;
+
   }
 
   &__add-to-cart {
-    background-color: #000;
+    font-family: $font-main;
+    background-color: $KelpGreen;
     color: #fff;
     padding: 10px 15px;
+    margin: 20px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 
+
     &:hover {
-      background-color: #333;
+      background-color: $DarkGreen;
     }
   }
 
   &__price {
+    font-family: $font-main;
     font-weight: bold;
     margin-top: 10px;
+    margin-left: 90px;
+
   }
 }
+
+
+// FOOTER---------------------------------------------
+
+footer {
+  width: 100%;
+  background-color: $FrenchGrey;
+  height: 150px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links {
+  font-family: $font-main;
+  color: $CrimsonRed;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  a {
+    text-decoration: none;
+    font-family: $font-main;
+    color: $CrimsonRed;
+    font-size: 20px;
+  }
+}
+
+.media {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  img {
+    width: 30px;
+  }
+}
+
+
 
 // Media query for responsiveness
 @media (max-width: 768px) {

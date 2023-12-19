@@ -3,21 +3,42 @@ $break-desktop : 900px;
 
 
 //Fonts
-$font-text :'Crimson Text', serif;
-$font-main :'Josefin Sans', sans-serif;
-$font-name :'Playfair Display', serif;
+$font-text :'Crimson Text',
+serif;
+$font-main :'Josefin Sans',
+sans-serif;
+$font-name :'Playfair Display',
+serif;
+$font-title : 'Paytone One, Sans-Serif';
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@400;700&display=swap');
 
-//Colors
 
+//Colors----------------------------------
 $primary-red : #6e1b10;
 $primary-dark : #212021;
 $primary-white : #f5f5f5;
+// RED-------------------------------------
+$BlackRaspberry: rgb(92, 0, 0); // DARK MODE ------------------------
+$Chestnut: rgb(117, 23, 23); // DARK MODE ------------------------
+$CrimsonRed: rgb(186, 12, 12);
+$PoppyRed: rgb(255, 0, 0);
+$FrenchGrey: rgb(255, 235, 235);
+// GREEN------------------------------------
+$GreyGreenLight: rgb(238, 253, 238);
+$OliveGreen: rgb(39, 163, 0);
+$DarkGreen: rgb(42, 133, 14);
+$KelpGreen: rgb(45, 102, 27); // DARK MODE ------------------------
+$DarkKelpGreen: rgb(0, 92, 0); // DARK MODE ------------------------
+
+
+
 
 //Spacings
 $space-m: 1rem;
-$space-m: 1.5rem;
+$space-n: 1.5rem;
 
-$grid-gap:0.8rem;
+$grid-gap: 0.8rem;
 
 //Effect
 
