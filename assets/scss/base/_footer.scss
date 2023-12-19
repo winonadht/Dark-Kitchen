@@ -1,6 +1,6 @@
 footer {
     width: 100%;
-    background-color: #57B947;
+    background-color: #3b912e;
     height: 150px;
     display: flex;
     flex-flow: column wrap;
@@ -12,11 +12,16 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
 }
 .media {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 30px;
     img {
         width: 30px;
     }
