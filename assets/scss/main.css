@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&family=Josefin+Sans:wght@300;400&family=Playfair+Display:wght@400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,13 +55,15 @@ table {
 
 footer {
   width: 100%;
-  background-color: rgb(45, 102, 27);
   height: 150px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+footer img {
+  width: 50px;
 }
 
 .links {
@@ -70,7 +73,7 @@ footer {
 }
 .links a {
   text-decoration: none;
-  color: white;
+  color: rgb(186, 12, 12);
   font-size: 20px;
 }
 
@@ -89,13 +92,11 @@ body {
 
 main {
   width: 100%;
-  height: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .pizza-card {
@@ -103,6 +104,7 @@ main {
   border-radius: 8px;
   margin: 10px;
   width: 300px;
+  height: 450px;
   transition: transform 0.3s ease-in-out;
 }
 .pizza-card:hover {
@@ -157,19 +159,12 @@ main {
     margin: 20px 0;
   }
 }
-body {
-  max-width: 90%;
-  margin: auto;
-  background-color: rgb(255, 255, 255);
-}
-
 header {
   width: 100%;
   height: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: rgb(14, 9, 9);
 }
 
 .imglogo {
@@ -181,10 +176,10 @@ header {
 .logopizza {
   width: 15%;
   height: 100%;
-  background-color: rgb(14, 9, 9);
 }
 
 .title {
+  font-family: "Paytone One, Sans-Serif";
   width: 60%;
   height: 100%;
   font-size: 250%;
@@ -193,19 +188,17 @@ header {
 
 h1 {
   font-family: "Paytone One", sans-serif;
-  color: beige;
+  color: rgb(0, 92, 0);
   font-size: 100px;
   margin-top: 3%;
   margin-left: 10%;
   letter-spacing: 10px;
-  text-shadow: 2px 2px 4px rgb(255, 84, 84);
+  text-shadow: 2px 2px 4px rgb(117, 23, 23);
 }
 
 .logomenu {
   width: 21%;
-  background-color: rgb(14, 9, 9);
   margin: auto;
-  border-radius: 20%;
 }
 
 .imgmenu {
@@ -215,71 +208,105 @@ h1 {
   margin: auto;
 }
 
-.dark-mode {
-  background-color: #1c1c1e;
-  color: #fefefe;
+.menuderoulant {
+  font-family: "Josefin Sans", sans-serif;
+  position: relative;
+  display: inline-block;
+}
+.menuderoulant ul {
+  display: none;
+}
+.menuderoulant:hover ul {
+  display: block;
 }
 
-.dark-mode-link {
-  color: blue;
+.listemenu {
+  position: relative;
+  list-style: none;
+  padding: 5%;
+  margin: 0;
+  background-color: rgb(238, 253, 238);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.listemenu li {
+  padding: 10px;
+  text-align: right;
+}
+
+.menuderoulant a {
+  font-family: "Crimson Text", serif;
+  font-size: x-large;
+  text-decoration: none;
+  color: rgb(92, 0, 0);
+}
+
+ul {
+  width: 60%;
+  height: 90px;
+  border-radius: 20px;
+}
+
+.dark-mode {
+  background-color: rgb(92, 0, 0);
+  color: white;
+}
+
+.dark-mode-header {
+  background-color: rgb(92, 0, 0);
+}
+.dark-mode-header h1 {
+  text-shadow: 2px 2px 4px rgb(238, 253, 238);
 }
 
 .dark-mode-card {
-  background-color: yellowgreen;
+  background-color: rgb(0, 92, 0);
 }
 
-.toggle-switch {
+.dark-mode-foot {
+  background-color: rgb(92, 0, 0);
+}
+.dark-mode-foot a {
+  color: rgb(255, 235, 235);
+}
+
+.switch {
   position: relative;
-  width: 100px;
-  height: 50px;
-  --light: #d8dbe0;
-  --dark: #28292c;
-  --link: rgb(27, 129, 112);
-  --link-hover: rgb(24, 94, 82);
+  display: inline-block;
+  width: 68px;
+  height: 38px;
+  margin: 3px;
 }
 
-.switch-label {
-  position: absolute;
-  width: 100%;
-  height: 50px;
-  background-color: var(--light);
-  border-radius: 25px;
-  cursor: pointer;
-  border: 3px solid var(--light);
-}
-
-.checkbox {
-  position: absolute;
-  display: none;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 25px;
-  transition: 0.3s;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  border-radius: 34px;
 }
 
-.checkbox:checked ~ .slider {
-  background-color: var(--dark);
-}
-
-.slider::before {
-  content: "";
+.slider:before {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 25px;
-  height: 25px;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 8px;
+  bottom: 7px;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: inset 12px -4px 0px 0px var(--dark);
-  background-color: var(--light);
-  transition: 0.3s;
 }
 
-.checkbox:checked ~ .slider::before {
-  transform: translateX(50px);
-  background-color: var(--light);
-  box-shadow: none;
+input:checked + .slider:before {
+  background-color: white;
+  transform: translateX(24px);
 }/*# sourceMappingURL=main.css.map */

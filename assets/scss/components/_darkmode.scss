@@ -1,12 +1,22 @@
 .dark-mode {
-    background-color: #1c1c1e;
-    color: #fefefe
+    background-color: $BlackRaspberry;
+    color: white;
 }
 
-.dark-mode-link {
-    color: blue;
+.dark-mode-header {
+    background-color: $BlackRaspberry;
+    h1 {
+        text-shadow: 2px 2px 4px $GreyGreenLight;
+    }
 }
 
 .dark-mode-card {
-    background-color: yellowgreen;
+    background-color: $DarkKelpGreen;
+}
+
+.dark-mode-foot {
+    background-color: $BlackRaspberry;
+    a {
+        color: $FrenchGrey;
+    }
 }

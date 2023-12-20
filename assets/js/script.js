@@ -48,6 +48,22 @@
         addToCart: "add to cart btn",  // Inserer une icon cart cliquable
         price: "11€",
       },
+      {
+        name: "Pizza Ananas",
+        veganOrNot: " ",
+        picture: 'assets/img/pizza-ananas.png',
+        reciepe: ["tomates", "mozzarella", "jambon", "ananas"],
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
+        price: "11€",
+      },
+      {
+        name: "Pizza Kiwi",
+        veganOrNot: "",
+        picture: 'assets/img/kiwi_pizza.webp',
+        reciepe: ["tomates", "mozzarella", "jambon", "kiwi"],
+        addToCart: "add to cart",  // Inserer une icon cart cliquable
+        price: "11€",
+      },
 ]
 
 document.addEventListener('DOMContentLoaded', function () {

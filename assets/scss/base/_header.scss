@@ -1,88 +1,97 @@
-@import "./utils/variables" ;
-
-body {
-    max-width: 90%;
-    margin: auto;  
-    background-color: rgb(255, 255, 255);
-}
 header {
     width: 100%;
-    height: 200px; 
-display: flex;
-flex-direction:row;
-align-items: center;
-background-color: $FrenchGrey;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-}
-.imglogo{
+  }
+  
+  .imglogo {
     width: 100%;
     height: 100%;
     margin-left: 20%;
-}
-.logopizza {
+  }
+  
+  .logopizza {
     width: 15%;
     height: 100%;
-    background-color: $FrenchGrey;
-}
-    .title {
+
+  }
+  
+  .title {
+    font-family: $font-title;
     width: 60%;
     height: 100%;
     font-size: 250%;
     text-align: center;
-
-}
-h1 {
-    font-family:'Paytone One', sans-serif;
+  
+  }
+  
+  h1 {
+    font-family: 'Paytone One', sans-serif;
     color: $DarkKelpGreen;
     font-size: 100px;
     margin-top: 3%;
     margin-left: 10%;
     letter-spacing: 10px;
     text-shadow: 2px 2px 4px $Chestnut;
-}
-.logomenu {
+  }
+  
+  .logomenu {
     width: 21%;
-    margin:auto;
-    
-}
-.imgmenu{
+    margin: auto;
+  
+  }
+  
+  .imgmenu {
     width: 60%;
     height: 50%;
     display: flex;
     margin: auto;
-}
-.menuderoulant { 
+  }
+  
+  .menuderoulant {
+    font-family: $font-main;
+  
     ul {
-        display:none;
+  
+      display: none;
     }
+  
     &:hover ul {
-        display:block;
+      display: block;
     }
+  
     position: relative;
     display: inline-block;
-}
-.listemenu {
-    position:relative;
+  }
+  
+  .listemenu {
+    position: relative;
     list-style: none;
-    padding:5%;
-    margin:0;
-    background-color: $white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-
-.listemenu li{
-   
+    padding: 5%;
+    margin: 0;
+    background-color: $GreyGreenLight;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .listemenu li {
+  
     padding: 10px;
     text-align: right;
-}
-.menuderoulant a {
+  }
+  
+  .menuderoulant a {
     font-family: $font-text;
-    font-size:x-large;
-    text-decoration:none;
-    color:$brown;
-}
-ul {
+    font-size: x-large;
+    text-decoration: none;
+    color: $BlackRaspberry;
+  }
+  
+  ul {
     width: 60%;
     height: 90px;
     border-radius: 20px;
-    }
+  }
+  

@@ -1,12 +1,14 @@
 footer {
     width: 100%;
-    background-color: $KelpGreen;
     height: 150px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    img {
+        width: 50px;
+    }
 }
 .links {
     display: flex;
@@ -14,7 +16,7 @@ footer {
     gap: 50px;
     a {
         text-decoration: none;
-        color: white;
+        color: $CrimsonRed;
         font-size: 20px;
     }
 }
