@@ -10,6 +10,7 @@
 // Base styles
 body {
   background-color: $FrenchGrey;
+  
 }
 
 // HEADER---------------------------------------------
@@ -21,6 +22,7 @@ header {
   flex-direction: row;
   align-items: center;
   background-color: $FrenchGrey;
+  
 
 }
 
@@ -62,8 +64,8 @@ h1 {
 }
 
 .imgmenu {
-  width: 60%;
-  height: 50%;
+  width: 75px;
+  height: auto;
   display: flex;
   margin: auto;
 }
@@ -71,13 +73,36 @@ h1 {
 .menuderoulant {
   font-family: $font-main;
 
-  ul {
-
+  .cart-container {
+    background-color: $GreyGreenLight;
+    border-radius: 8px;
+    margin: 10px;
+    // overflow: hidden;
+    width: 200px;
+    // height: 200px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: none;
+    position: absolute;
+
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    div {
+      margin-left: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+    }
+
   }
 
-  &:hover ul {
+  &:hover .cart-container {
     display: block;
+
   }
 
   position: relative;
@@ -167,7 +192,7 @@ main {
   &__photo {
     width: 100%;
     height: 150px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
     object-fit: cover;
   }
 
@@ -177,6 +202,8 @@ main {
     font-family: $font-main;
 
   }
+
+
 
   &__add-to-cart {
     font-family: $font-main;
@@ -217,6 +244,12 @@ footer {
   gap: 20px;
 }
 
+.imglogofooter {
+  width: 50px;
+  height: auto;
+  align-content: center;
+}
+
 .links {
   font-family: $font-main;
   color: $CrimsonRed;
@@ -251,3 +284,72 @@ footer {
     margin: 20px 0;
   }
 }
+
+// BOUTON--------------------------------------
+// .CartBtn {
+//   width: 140px;
+//   height: 40px;
+//   border-radius: 12px;
+//   border: none;
+//   background-color: $KelpGreen;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   transition-duration: .5s;
+//   overflow: hidden;
+//   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+//   position: relative;
+// }
+
+// .IconContainer {
+//   position: absolute;
+//   left: -50px;
+//   width: 30px;
+//   height: 30px;
+//   background-color: transparent;
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+//   z-index: 2;
+//   transition-duration: .5s;
+// }
+
+// .icon {
+//   border-radius: 1px;
+// }
+
+// .text {
+//   height: 100%;
+//   width: fit-content;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: white;
+//   z-index: 1;
+//   transition-duration: .5s;
+//   font-size: 1.04em;
+//   font-weight: 600;
+// }
+
+// .CartBtn:hover .IconContainer {
+//   transform: translateX(58px);
+//   border-radius: 40px;
+//   transition-duration: .5s;
+  
+// }
+
+// .CartBtn:hover .text {
+//   transform: translate(10px,0px);
+//   transition-duration: .5s;
+// }
+
+// .CartBtn:active {
+//   transform: scale(0.95);
+//   transition-duration: .5s;
+//   background-color: $DarkGreen;
+  
+// }
+// BOUTON--------------------------------------
