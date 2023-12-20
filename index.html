@@ -1,13 +1,11 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link href ="style.css" rel ="stylesheet">
+    <link href ="assets/scss/style.css" rel ="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
     <title>Dark kitchen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +13,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <header> 
         <section class="logopizza">
         <a href="">
-            <img class= imglogo src="/assets/pngimg.com - pizza_PNG43995.png" alt="Logo pizza">
+            <img class= imglogo src="/assets/img/pngimg.com - pizza_PNG43995.png" alt="Logo pizza">
             </a>
     </section>
     <section class="title">
@@ -29,60 +31,19 @@
     </section>
     <section class="logomenu">
         <a class=lien href="lien">
-        <img class= imgmenu src="/assets/4813064.png" alt="Logo Menu">
-        
+            <section class="menuderoulant">
+        <img class= imgmenu src="/assets/img/4813064.png" alt="Logo Menu">
+        <ul class="listemenu">
+            <li><a href="#">pizzas</a></li>
+            <li><a href="#">pizzas veggies</a></li>
+        </ul>
+    </section>
     </a>
     </section>
     </header>
 
-    <main>
-        <!--  a faire dans JS -->
-    </main>
-    <a href="">logo of dark kitchen</a>
-
-
-
-
-    <footer>
-        <section>
-            <a href="">logo of dark kitchen</a>
-        </section>
-
-        <section class="links">
-        <a href="">about</a>
-        <a href="">go to cart</a>
-        <a href="">menu</a>
-    </section>
-
-
-        <section class="media">
-            <a href="">insta</a>
-            <a href="">FB</a>
-            <a href="">Twitter</a>
-        </section>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/script.js"></script>
-    <title>Dark kitchen</title>
-</head>
-
-<body>
-    <header>
-        <a href="">logo of dark kitchen</a>
-        <h1>Name of Dark kitchen</h1>
-        <a href="">logo menu (burger)</a>
-    </header>
+    <button id="veggieButton">Veggie</button>
+    <button id="nonVeggieButton">Normales</button>
 
     <main>
         <!--  a faire dans JS -->
@@ -110,7 +71,7 @@
             <a href="">Twitter</a>
         </section>
     </footer>
+    <script defer src="script.js"></script>
 </body>
 
->>>>>>> 8d503383129d63a567b1194c60a6c70665567eb0
 </html>
