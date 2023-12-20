@@ -1,6 +1,6 @@
 //Mixin pour la média-queries de la version desktop
-@mixin responsive-desktop {
-    @media screen and (min-width : $break-desktop){
+@mixin responsive-desktop($break) {
+    @media screen and (max-width:$break){
         @content;
     }
 }

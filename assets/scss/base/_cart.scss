@@ -17,9 +17,15 @@ main {
   border-radius: 8px;
   margin: 10px;
   // overflow: hidden;
-  width: 300px;
+  width: 25%;
   height: 450px;
   transition: transform 0.3s ease-in-out;
+  @include responsive-desktop ($break-tab){
+    width: 40%;
+  }
+  @include responsive-desktop ($break-mob){
+    width: 80%;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -75,15 +81,8 @@ main {
     font-family: $font-main;
     font-weight: bold;
     margin-top: 10px;
-    margin-left: 90px;
+    margin-left: 70px;
     
   }
 }
 
-// Media query for responsiveness
-@media (max-width: 768px) {
-  .pizza-card {
-    width: 100%;
-    margin: 20px 0;
-  }
-}
